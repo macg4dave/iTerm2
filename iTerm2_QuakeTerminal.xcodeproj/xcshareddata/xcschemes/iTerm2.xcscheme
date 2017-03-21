@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "874206460564169600CFC3F1"
                BuildableName = "iTerm2.app"
-               BlueprintName = "iTerm2"
-               ReferencedContainer = "container:iTerm2.xcodeproj">
+               BlueprintName = "iTerm2_QuakeTerminal"
+               ReferencedContainer = "container:iTerm2_QuakeTerminal.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,9 +34,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A6C7641B1B45CB2800E3C992"
-               BuildableName = "iTerm2XCTests.xctest"
-               BlueprintName = "iTerm2XCTests"
-               ReferencedContainer = "container:iTerm2.xcodeproj">
+               BuildableName = "iTerm2_QuakeTerminalXCTests.xctest"
+               BlueprintName = "iTerm2_QuakeTerminalXCTests"
+               ReferencedContainer = "container:iTerm2_QuakeTerminal.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -45,8 +45,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "874206460564169600CFC3F1"
             BuildableName = "iTerm2.app"
-            BlueprintName = "iTerm2"
-            ReferencedContainer = "container:iTerm2.xcodeproj">
+            BlueprintName = "iTerm2_QuakeTerminal"
+            ReferencedContainer = "container:iTerm2_QuakeTerminal.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -74,8 +74,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "874206460564169600CFC3F1"
             BuildableName = "iTerm2.app"
-            BlueprintName = "iTerm2"
-            ReferencedContainer = "container:iTerm2.xcodeproj">
+            BlueprintName = "iTerm2_QuakeTerminal"
+            ReferencedContainer = "container:iTerm2_QuakeTerminal.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -98,8 +98,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "874206460564169600CFC3F1"
             BuildableName = "iTerm2.app"
-            BlueprintName = "iTerm2"
-            ReferencedContainer = "container:iTerm2.xcodeproj">
+            BlueprintName = "iTerm2_QuakeTerminal"
+            ReferencedContainer = "container:iTerm2_QuakeTerminal.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

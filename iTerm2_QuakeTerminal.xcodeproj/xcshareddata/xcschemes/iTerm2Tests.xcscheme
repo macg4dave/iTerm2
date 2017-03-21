@@ -17,7 +17,7 @@
                BlueprintIdentifier = "1DD39AD3180B8117004E56D5"
                BuildableName = "iTerm2Tests.app"
                BlueprintName = "iTerm2Tests"
-               ReferencedContainer = "container:iTerm2.xcodeproj">
+               ReferencedContainer = "container:iTerm2_QuakeTerminal.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A6C7641B1B45CB2800E3C992"
-               BuildableName = "iTerm2XCTests.xctest"
-               BlueprintName = "iTerm2XCTests"
-               ReferencedContainer = "container:iTerm2.xcodeproj">
+               BuildableName = "iTerm2_QuakeTerminalXCTests.xctest"
+               BlueprintName = "iTerm2_QuakeTerminalXCTests"
+               ReferencedContainer = "container:iTerm2_QuakeTerminal.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -45,7 +45,7 @@
             BlueprintIdentifier = "1DD39AD3180B8117004E56D5"
             BuildableName = "iTerm2Tests.app"
             BlueprintName = "iTerm2Tests"
-            ReferencedContainer = "container:iTerm2.xcodeproj">
+            ReferencedContainer = "container:iTerm2_QuakeTerminal.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -68,7 +68,7 @@
             BlueprintIdentifier = "1DD39AD3180B8117004E56D5"
             BuildableName = "iTerm2Tests.app"
             BlueprintName = "iTerm2Tests"
-            ReferencedContainer = "container:iTerm2.xcodeproj">
+            ReferencedContainer = "container:iTerm2_QuakeTerminal.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -87,7 +87,7 @@
             BlueprintIdentifier = "1DD39AD3180B8117004E56D5"
             BuildableName = "iTerm2Tests.app"
             BlueprintName = "iTerm2Tests"
-            ReferencedContainer = "container:iTerm2.xcodeproj">
+            ReferencedContainer = "container:iTerm2_QuakeTerminal.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
