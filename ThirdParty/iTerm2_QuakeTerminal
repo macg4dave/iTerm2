@@ -1,0 +1,32 @@
+#!/bin/bash
+
+
+is_running="$(pgrep iTerm2_QuakeTerminal)"
+run_once=false
+
+if [ "$run_once" = false ]; then
+
+SCRIPT_PATH="${BASH_SOURCE[0]}"
+SCRIPT_dir="$(echo $SCRIPT_PATH | rev | cut -c 21- | rev > /tmp/quakepath)"
+res_dir="$(head /tmp/quakepath)"
+dir_script="$(echo $res_dir | rev | cut -c 7- | rev)"
+
+open_app="$($res_dir"iTerm2_QuakeTerminal_runtime" >&- 2>&- &)"
+open_script="$(osascript $dir_script"Resources/quaketerminal.scpt")"
+
+run_once=true
+
+#if [ -n "${is_running}" ]; then
+#$open_script
+
+#exit 0
+
+#fi
+
+
+$open_app  
+ $open_script
+
+exit 0
+
+fi

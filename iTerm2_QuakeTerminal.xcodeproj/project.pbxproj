@@ -1200,10 +1200,10 @@
 		53AFFC8F1DD2A04600E6CEC6 /* iTermLSOF.h in Headers */ = {isa = PBXBuildFile; fileRef = 53AFFC8A1DD2A03800E6CEC6 /* iTermLSOF.h */; };
 		53AFFC921DD38F1500E6CEC6 /* ToolWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = 53AFFC901DD38F1500E6CEC6 /* ToolWebView.h */; };
 		53AFFC931DD38F1500E6CEC6 /* ToolWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53AFFC911DD38F1500E6CEC6 /* ToolWebView.m */; };
-		5540877D1E827FAA009768F0 /* quaketerminal.scpt in Resources */ = {isa = PBXBuildFile; fileRef = 5540877C1E827FAA009768F0 /* quaketerminal.scpt */; };
-		554087811E827FC1009768F0 /* com.quaketerminal.iterm2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5540877E1E827FC1009768F0 /* com.quaketerminal.iterm2.plist */; };
-		554087821E827FC1009768F0 /* Displayinfo.sh in Resources */ = {isa = PBXBuildFile; fileRef = 5540877F1E827FC1009768F0 /* Displayinfo.sh */; };
-		554087831E827FC1009768F0 /* Welcome.sh in Resources */ = {isa = PBXBuildFile; fileRef = 554087801E827FC1009768F0 /* Welcome.sh */; };
+		5578CCA31E830D21004D9704 /* iTerm2_QuakeTerminal in Resources */ = {isa = PBXBuildFile; fileRef = 5578CCA21E830D21004D9704 /* iTerm2_QuakeTerminal */; };
+		55C59F1C1E828169004841BB /* com.quaketerminal.iterm2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55C59F181E828169004841BB /* com.quaketerminal.iterm2.plist */; };
+		55C59F1D1E828169004841BB /* Displayinfo.sh in Resources */ = {isa = PBXBuildFile; fileRef = 55C59F191E828169004841BB /* Displayinfo.sh */; };
+		55C59F1F1E828169004841BB /* Welcome.sh in Resources */ = {isa = PBXBuildFile; fileRef = 55C59F1B1E828169004841BB /* Welcome.sh */; };
 		5ECE005F1454E59B004861E9 /* PseudoTerminalRestorer.h in Headers */ = {isa = PBXBuildFile; fileRef = 5ECE005D1454E59B004861E9 /* PseudoTerminalRestorer.h */; };
 		5ECE4AE814513F05002A9CC2 /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5ECE4AC41451343E002A9CC2 /* Growl.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		5ECE4AEA14514058002A9CC2 /* Growl Registration Ticket.growlRegDict in Resources */ = {isa = PBXBuildFile; fileRef = 5ECE4AE914514058002A9CC2 /* Growl Registration Ticket.growlRegDict */; };
@@ -3060,10 +3060,11 @@
 		53EBF2B81DCCF66600766613 /* iTermWebSocketFrameBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iTermWebSocketFrameBuilder.m; sourceTree = "<group>"; };
 		53EBF2BB1DCCF6A700766613 /* iTermWebSocketConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTermWebSocketConnection.h; sourceTree = "<group>"; };
 		53EBF2BC1DCCF6A700766613 /* iTermWebSocketConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iTermWebSocketConnection.m; sourceTree = "<group>"; };
-		5540877C1E827FAA009768F0 /* quaketerminal.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; path = quaketerminal.scpt; sourceTree = "<group>"; };
-		5540877E1E827FC1009768F0 /* com.quaketerminal.iterm2.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = com.quaketerminal.iterm2.plist; sourceTree = "<group>"; };
-		5540877F1E827FC1009768F0 /* Displayinfo.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = Displayinfo.sh; sourceTree = "<group>"; };
-		554087801E827FC1009768F0 /* Welcome.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = Welcome.sh; sourceTree = "<group>"; };
+		5578CCA21E830D21004D9704 /* iTerm2_QuakeTerminal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = iTerm2_QuakeTerminal; sourceTree = "<group>"; };
+		5578CCA41E830D6B004D9704 /* quaketerminal.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; path = quaketerminal.scpt; sourceTree = "<group>"; };
+		55C59F181E828169004841BB /* com.quaketerminal.iterm2.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = com.quaketerminal.iterm2.plist; path = QuakeTerminal/com.quaketerminal.iterm2.plist; sourceTree = "<group>"; };
+		55C59F191E828169004841BB /* Displayinfo.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = Displayinfo.sh; path = QuakeTerminal/Displayinfo.sh; sourceTree = "<group>"; };
+		55C59F1B1E828169004841BB /* Welcome.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = Welcome.sh; path = QuakeTerminal/Welcome.sh; sourceTree = "<group>"; };
 		5ECE005D1454E59B004861E9 /* PseudoTerminalRestorer.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = PseudoTerminalRestorer.h; sourceTree = "<group>"; tabWidth = 4; };
 		5ECE005E1454E59B004861E9 /* PseudoTerminalRestorer.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = PseudoTerminalRestorer.m; sourceTree = "<group>"; tabWidth = 4; };
 		5ECE4AC41451343E002A9CC2 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Growl.framework; sourceTree = "<group>"; };
@@ -5145,10 +5146,11 @@
 		5500A6111E812488009D6A46 /* QuakeTerminal */ = {
 			isa = PBXGroup;
 			children = (
-				5540877E1E827FC1009768F0 /* com.quaketerminal.iterm2.plist */,
-				5540877F1E827FC1009768F0 /* Displayinfo.sh */,
-				554087801E827FC1009768F0 /* Welcome.sh */,
-				5540877C1E827FAA009768F0 /* quaketerminal.scpt */,
+				5578CCA41E830D6B004D9704 /* quaketerminal.scpt */,
+				5578CCA21E830D21004D9704 /* iTerm2_QuakeTerminal */,
+				55C59F181E828169004841BB /* com.quaketerminal.iterm2.plist */,
+				55C59F191E828169004841BB /* Displayinfo.sh */,
+				55C59F1B1E828169004841BB /* Welcome.sh */,
 			);
 			name = QuakeTerminal;
 			sourceTree = "<group>";
@@ -7784,7 +7786,6 @@
 				A67D0D441A2EE12A003A8B35 /* BulkCopyProfilePreferences.xib in Resources */,
 				A6B3A73E1AC74E02008E8D4E /* FindCursorCell1.png in Resources */,
 				A67D0D4A1A2EE12A003A8B35 /* configPanel.strings in Resources */,
-				554087821E827FC1009768F0 /* Displayinfo.sh in Resources */,
 				A67D0D531A2EE12A003A8B35 /* GlobalSearch.xib in Resources */,
 				A67D0D8F1A2EE12A003A8B35 /* TmuxDashboard.xib in Resources */,
 				A66DB8331C8E4C2E00233E88 /* ChangeProfile@2x.png in Resources */,
@@ -7804,7 +7805,6 @@
 				A67D0D7A1A2EE12A003A8B35 /* PasteView.xib in Resources */,
 				1D8BBA841B31DC0D0005A852 /* ChevronDown.png in Resources */,
 				A6B3A7381AC74E02008E8D4E /* FindCursorCell3.png in Resources */,
-				5540877D1E827FAA009768F0 /* quaketerminal.scpt in Resources */,
 				A6C7DE5919A459E9001E5C75 /* iTerm2_QuakeTerminal.sdef in Resources */,
 				1DE922EA1AC370DC00965876 /* BackgroundStripes@2x.png in Resources */,
 				A69B457B1967B03B00F5444D /* BrokenPipeDivider.png in Resources */,
@@ -7855,7 +7855,6 @@
 				A69A15731D7FD78200A9E7EF /* TipCalendar.png in Resources */,
 				1DA02CFB1327612600D7E7DB /* bell.png in Resources */,
 				A67D0D861A2EE12A003A8B35 /* PseudoTerminal.strings in Resources */,
-				554087811E827FC1009768F0 /* com.quaketerminal.iterm2.plist in Resources */,
 				A6FD85311B767D6300EB9DCE /* Hamburger@2x.png in Resources */,
 				1DA030F91328BD7C00D7E7DB /* wrap_to_bottom.png in Resources */,
 				A68E33371DE746F5003F1D8E /* Previous Mark Touch Bar Icon.png in Resources */,
@@ -7904,6 +7903,7 @@
 				A67D0D4D1A2EE12A003A8B35 /* DirectoriesPopup.xib in Resources */,
 				1DBBA5E11B3CB0590026E3B6 /* restore-arrangement@2x.png in Resources */,
 				A68E333B1DE78D08003F1D8E /* Man Page Touch Bar Icon.png in Resources */,
+				5578CCA31E830D21004D9704 /* iTerm2_QuakeTerminal in Resources */,
 				A6339DD71D232CEE000BAD78 /* StatusItem.png in Resources */,
 				A67D0D621A2EE12A003A8B35 /* iTermOpenQuicklyWindowController.xib in Resources */,
 				1D48B285165F362B000046EE /* TabClose_Front_Pressed@2x.png in Resources */,
@@ -7919,10 +7919,11 @@
 				1D99C8E71BD59C37001EE1FC /* SearchCursor@2x.png in Resources */,
 				A6B70FC119830F0D007A4284 /* NewOutput.png in Resources */,
 				1DA76A0B1B30892900CB272A /* iTermTipWindowController.xib in Resources */,
+				55C59F1D1E828169004841BB /* Displayinfo.sh in Resources */,
 				A67D0D6B1A2EE12A003A8B35 /* iTermPasteSpecialWindow.xib in Resources */,
 				A68BADFC1E0DD52F00E4BB7B /* Touch Bar Function Keys@2x.png in Resources */,
-				554087831E827FC1009768F0 /* Welcome.sh in Resources */,
 				1D4BAFEE1BFE77E4004FF52B /* iTermPrintAccessoryViewController.xib in Resources */,
+				55C59F1F1E828169004841BB /* Welcome.sh in Resources */,
 				A6339DDC1D232DF2000BAD78 /* StatusItemAlt@2x.png in Resources */,
 				A67F118018D82B9500B23C7B /* PrefsAdvanced.png in Resources */,
 				9D737D6017495B4100B3334D /* PrefsGeneral@2x.png in Resources */,
@@ -7930,6 +7931,7 @@
 				9DB3D6E0176C8F0B0071CCF8 /* PrefsAppearance.png in Resources */,
 				A66DB8321C8E4C2E00233E88 /* ChangeProfile.png in Resources */,
 				A6057C171883D12E004A60AF /* broken_image.png in Resources */,
+				55C59F1C1E828169004841BB /* com.quaketerminal.iterm2.plist in Resources */,
 				A6ECA5931D7535E700D19511 /* image_decoder.sb in Resources */,
 				9DB3D6E1176C8F0B0071CCF8 /* PrefsAppearance@2x.png in Resources */,
 				A67D0D681A2EE12A003A8B35 /* iTermPasteSpecialViewController.xib in Resources */,
