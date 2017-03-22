@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "874206460564169600CFC3F1"
-               BuildableName = "iTerm2.app"
+               BuildableName = "iTerm2_QuakeTerminal.app"
                BlueprintName = "iTerm2_QuakeTerminal"
                ReferencedContainer = "container:iTerm2_QuakeTerminal.xcodeproj">
             </BuildableReference>
@@ -44,7 +44,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "874206460564169600CFC3F1"
-            BuildableName = "iTerm2.app"
+            BuildableName = "iTerm2_QuakeTerminal.app"
             BlueprintName = "iTerm2_QuakeTerminal"
             ReferencedContainer = "container:iTerm2_QuakeTerminal.xcodeproj">
          </BuildableReference>
@@ -73,7 +73,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "874206460564169600CFC3F1"
-            BuildableName = "iTerm2.app"
+            BuildableName = "iTerm2_QuakeTerminal.app"
             BlueprintName = "iTerm2_QuakeTerminal"
             ReferencedContainer = "container:iTerm2_QuakeTerminal.xcodeproj">
          </BuildableReference>
@@ -97,7 +97,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "874206460564169600CFC3F1"
-            BuildableName = "iTerm2.app"
+            BuildableName = "iTerm2_QuakeTerminal.app"
             BlueprintName = "iTerm2_QuakeTerminal"
             ReferencedContainer = "container:iTerm2_QuakeTerminal.xcodeproj">
          </BuildableReference>

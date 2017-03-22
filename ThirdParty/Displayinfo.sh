@@ -1,12 +1,4 @@
 #!/bin/bash
-
-
-#  Displayinfo.sh
-#  iTerm2_QuakeTerminal
-#
-#  Created by Dave on 21/03/2017.
-#
-
 clear
 macos_ver="$(sw_vers | grep ProductVersion | sed 's/ProductVersion/MacOS/g' | awk '{print $2}')"
 
@@ -86,7 +78,7 @@ del_temp="$(rm /tmp/terminfo)"
 make_temp="$(touch /tmp/terminfo)"
 
 if [ ! -f /tmp/terminfo ]; then
-${make_temp}
+    ${make_temp}
 else
 
 ${del_temp}
@@ -95,7 +87,7 @@ ${make_temp}
 fi
 
 tmp_file="/tmp/terminfo"
-
+ 
 
 
 #clear
@@ -145,10 +137,18 @@ cat /tmp/terminfo | awk '$1=$1' > /tmp/termdone
 
 
 display_center(){
-columns="$(tput cols)"
-while IFS= read -r line; do
-printf "%*s\n" $(( (${#line} + columns) / 2)) "$line"
-done < "$1"
+    columns="$(tput cols)"
+    while IFS= read -r line; do
+        printf "%*s\n" $(( (${#line} + columns) / 2)) "$line"
+    done < "$1"
 }
 
-cat /tmp/termdone | column -s "*&*" -t
+cat /tmp/termdone | column -s "*&*" -t 
+
+#old code
+
+#cpu_ramwired_info="$(top -l 1 | grep PhysMem | awk '{print $4}' | cut -c 2- | rev | cut -c 2- | rev)"
+#time_ramwire_size="$(echo $cpu_ramwired_info "*" "1000000" | bc)"
+
+#cpu_ramfree_info="$(top -l 1 | grep PhysMem | awk '{print $6}' | rev | cut -c 2- | rev)"
+#time_ramfree_size="$(echo $cpu_ramfree_info "*" "1000000" | bc)"

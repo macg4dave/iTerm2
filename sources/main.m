@@ -14,6 +14,12 @@
 #import "FutureMethods.h"
 #import "shell_launcher.h"
 
+
+#import <Foundation/Foundation.h>
+#include <stdlib.h>
+#include <unistd.h>
+
+
 int main(int argc, const char *argv[]){
     if (argc > 1 && !strcmp(argv[1], "--launch_shell")) {
         // Run the user's shell.
@@ -31,4 +37,34 @@ int main(int argc, const char *argv[]){
     sigprocmask(SIG_BLOCK, &signals, NULL);
 
     return NSApplicationMain(argc, argv);
+    
+    
+    
+    //messup start
+    
+   
+
+    
+
+
+
+    
+    
+  
+    
+    //mess up over
+   
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
