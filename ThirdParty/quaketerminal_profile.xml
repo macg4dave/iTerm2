@@ -1,0 +1,18 @@
+{
+  "Profiles": [
+    {
+       "Name": "QuakeTerminal",
+       "Guid": "Makequakewindow_101",
+       "NSWindow Frame SharedPreferences" : "269 190 918 452 0 0 1680 1028",
+       "NSWindow Frame iTerm Window 0" : "37 769 1643 259 0 0 1680 1028",
+       "Blink Allowed" : "true",
+       "Blinking Cursor" : "true",
+       "Unlimited Scrollback" : "true",
+       "Blur Radius" : "12",
+       "Rows" : "2",
+       "Window Type" : "2",
+       "Transparency" : "0.17203362944162437",
+       "Blur" : "True",
+    },
+  ]
+}
