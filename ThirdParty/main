@@ -61,28 +61,10 @@ set open_script to do shell script "head /tmp/quakescriptopen"
 
 do shell script open_app & " &>/dev/null & "
 
+do shell script "sleep 0.5"
 do shell script "osascript " & open_script
 
 EOD
 
-sleep 0.5
-
 fi
-
-
-#if [ "$run_once" == "true" ]; then
-
-#run_once="false"
-
-#osascript <<'EOD'
-
-#set close_script to do shell script "head /tmp/quakescriptclose"
-
-#do shell script "osascript " & close_script
-
-#EOD
-
-#exit 0
-
-#fi
 
