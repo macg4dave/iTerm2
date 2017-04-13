@@ -14,8 +14,10 @@ uptime_time="$(uptime | sed 's/.*up \([^,]*\), .*/\1/')"
 
 uptime_load="$(uptime | rev | awk '{print $1, $2, $3}' | rev)"
 
-uptime_user="$(uptime | awk '{print $4}')"
+#Network
+network_down="$(cat /tmp/topstats | grep "Networks" | awk '{print $3}' | sed -e 's/[\/&]/\\ /g' | awk '{print $2}')"
 
+network_up="$(cat /tmp/topstats | grep "Networks" | awk '{print $5}' | sed -e 's/[\/&]/\\ /g' | awk '{print $2}')"
 
 #CPU Usage
 cpu_used_user="$(cat /tmp/topstats | grep "CPU usage" | awk '{print $3}')"
@@ -68,8 +70,8 @@ tmp_file="/tmp/terminfo"
 
 #clear
 
-echo -e "$colour_yellow" "MacOS" "*&*" "Boot Volume" "*&*" "Volumes Size" "*&*" "Total Used" "*&*" "Total Free" "*&*" "Uptime" "*&*" "Load Averages"  "*&*" "CPU User" "*&*" "CPU System" "*&*" "CPU Idle" "$colour_stop" >> $tmp_file
-echo -e "$colour_blue"  "${macos_ver}" "*&*" "${startup_name}" "*&*" "${startup_size}"bs "*&*" "${startup_used}"bs "*&*" "${startup_free}"bs "*&*" "${uptime_time}" "*&*" "${uptime_load}" "*&*" "${cpu_used_user}" "*&*" "${cpu_used_sys}" "*&*" "${cpu_used_idle}" "$colour_stop" >> $tmp_file
+echo -e "$colour_yellow" "MacOS" "*&*" "Boot Volume" "*&*" "Volumes Size" "*&*" "Total Used" "*&*" "Total Free" "*&*" "Uptime" "*&*" "Load Averages"  "*&*" "CPU User" "*&*" "CPU System" "*&*" "CPU Idle" "*&*" "Network Down" "*&*" "Network Up" "$colour_stop" >> $tmp_file
+echo -e "$colour_blue"  "${macos_ver}" "*&*" "${startup_name}" "*&*" "${startup_size}"bs "*&*" "${startup_used}"bs "*&*" "${startup_free}"bs "*&*" "${uptime_time}" "*&*" "${uptime_load}" "*&*" "${cpu_used_user}" "*&*" "${cpu_used_sys}" "*&*" "${cpu_used_idle}" "*&*" "${network_down}" "*&*" "${network_up}" "$colour_stop" >> $tmp_file
 
 
 #prints screen
