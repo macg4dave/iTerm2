@@ -1,0 +1,72 @@
+#!/usr/bin/perl
+
+use strict;
+use File::Spec::Functions qw(rel2abs);
+use File::Basename;
+print dirname(rel2abs($0));
+open(OUTPUT,">/tmp/quaketerminal_path");
+
+print OUTPUT dirname(rel2abs($0));
+
+my $sh_script = do { local $/; <DATA> };
+
+my @args = ( 'option1' );
+
+system(sh => (-c => $sh_script, '--', @args) ) == 0
+    or die "$?/$!\n";
+
+__DATA__
+#!/bin/sh
+
+osascript <<'EOD'
+
+set fixedfullpath to do shell script "head /tmp/quaketerminal_path"
+
+set chars to every character of fixedfullpath
+
+repeat with i from 2 to length of chars
+
+        if item i of chars as text is equal to " " then
+                set item i of chars to "\\ "
+
+        end if
+end repeat
+
+set fullpath to every item of chars as string
+
+do shell script "echo " & quoted form of POSIX path of fullpath & " > /tmp/quaketerminal_path"
+
+set full_app to do shell script "head /tmp/quaketerminal_path"
+
+do shell script "head /tmp/quaketerminal_path | rev | cut -c 6- | rev > /tmp/scriptspath"
+set con_script to do shell script "head /tmp/scriptspath"
+
+set chars to every character of con_script
+
+
+repeat with i from 2 to length of chars
+
+        if item i of chars as text is equal to " " then
+                set item i of chars to "\\ "
+
+        end if
+end repeat
+
+set con_script to every item of chars as string
+
+do shell script "echo " & con_script & "Resources/iTerm2_QuakeTerminal.app/Contents/Resources/main > /tmp/quakemain"
+do shell script "echo " & con_script & "Resources/iTerm2_QuakeTerminal.app/Contents/Resources/open_quaketerminal.scpt > /tmp/quakescriptopen"
+do shell script "echo " & con_script & "Resources/iTerm2_QuakeTerminal.app/Contents/Resources/close_quaketerminal.scpt > /tmp/quakescriptclose"
+do shell script "echo " & con_script & "Resources/iTerm2_QuakeTerminal.app/Contents/Resources/quaketerminal_profile.xml > /tmp/quakepref"
+do shell script "echo " & con_script & "Resources/iTerm2_QuakeTerminal.app/Contents/MacOS/iTerm2_QuakeTerminal > /tmp/quakeapp"
+do shell script "echo " & con_script & "Resources/iTerm2_QuakeTerminal.app/Contents/Resources/killscript > /tmp/quakekill"
+do shell script "echo " & con_script & "Resources/iTerm2_QuakeTerminal.app/Contents/Resources/logo > /tmp/logo"
+
+set logo_path to do shell script "head /tmp/logo"
+
+do shell script "cp " & logo_path & " /tmp/logodisplay"
+
+set start_main to do shell script "head /private/tmp/quakemain"
+
+do shell script start_main & " &>/dev/null & "
+EOD

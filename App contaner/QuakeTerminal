@@ -1,0 +1,141 @@
+#!/bin/bash -x
+
+make_pref="$(defaults read com.quaketerminal.iterm2.plist hasquakesetup)"
+
+if [ -z "${make_pref}" ]; then
+
+full_path="${BASH_SOURCE[0]}"
+
+pref_dir="$(echo $full_path | rev | cut -c 30- | rev > /tmp/prefpath)"
+
+pref_dir_script="$(head /tmp/prefpath)"
+
+dir_pref="$(echo $pref_dir_script)"
+
+mkdir -p ~/Library/Application\ Support/iTerm2_QuakeTerminal/DynamicProfiles
+
+cat $dir_pref"/Contents/Resources/iTerm2_QuakeTerminal.app/Contents/Resources/quaketerminal_profile.xml" > ~/Library/Application\ Support/iTerm2_QuakeTerminal/DynamicProfiles/quaketerminal_profile.xml
+
+defaults write com.quaketerminal.iterm2.plist SUEnableAutomaticChecks false
+defaults write com.quaketerminal.iterm2.plist PromptOnQuit false
+defaults write com.quaketerminal.iterm2.plist "Default Bookmark Guid" Makequakewindow_101
+defaults write com.quaketerminal.iterm2.plist hasquakesetup true
+
+
+fi 
+
+
+
+is_running="$(ps aux | grep "iTerm2_QuakeTerminal" | grep "MacOS" | grep "iTerm2_QuakeTerminal" | awk '{print $2}')"
+
+if [ -z "${is_running}" ]; then
+    
+run_once="true"
+
+
+fi
+
+
+if [ -n "${is_running}" ]; then
+
+run_once="false"    
+
+txt_dir_script="$(head /tmp/scriptpath)"
+dir_script="$(echo $txt_dir_script)"
+
+open_script="$(osascript $dir_script"/Contents/Resources/iTerm2_QuakeTerminal.app/Contents/Resources/close_quaketerminal.scpt")"
+
+$open_script
+
+sleep 0.5
+
+kill_script="$($dir_script"/Contents/Resources/iTerm2_QuakeTerminal.app/Contents/Resources/killscript")"
+#$kill_script
+fi
+
+
+
+if [ "$run_once" == "true" ]; then
+
+
+full_path="${BASH_SOURCE[0]}"
+
+unix_bin_path="$(echo $full_path | rev | cut -c 30- | rev > /tmp/quakepath)"
+
+script_dir="$(echo $full_path | rev | cut -c 30- | rev > /tmp/scriptpath)"
+
+
+txt_dir_bin="$(head /tmp/quakepath)"
+
+txt_dir_script="$(head /tmp/scriptpath)"
+
+
+dir_script="$(echo $txt_dir_script)"
+
+dir_bin="$(echo $txt_dir_bin)"
+
+
+open_app="$($dir_bin"/Contents/Resources/iTerm2_QuakeTerminal.app/Contents/MacOS/iTerm2_QuakeTerminal" &>/dev/null &)"
+
+sleep 0.5
+
+open_script="$(osascript $dir_script"/Contents/Resources/iTerm2_QuakeTerminal.app/Contents/Resources/open_quaketerminal.scpt")"
+
+fi
+
+
+if [ "$run_once" == "true" ]; then
+
+run_once="false"
+
+$open_app 
+
+#$open_script
+
+exit 0
+
+fi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
