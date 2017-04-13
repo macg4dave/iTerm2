@@ -1,7 +1,0 @@
-#!/bin/bash
-get_list="$(ps aux | grep "iTerm2_QuakeTerminal" | grep "MacOS" | grep "iTerm2_QuakeTerminal" | awk '{print $2}')"
-
-for i in ${get_list[@]}; do
-kill ${i}
-done
-
