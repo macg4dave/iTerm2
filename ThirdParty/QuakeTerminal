@@ -20,6 +20,8 @@ __DATA__
 
 osascript <<'EOD'
 
+set user_name to do shell script "whoami"
+
 set fixedfullpath to do shell script "head /tmp/quaketerminal_path"
 
 set chars to every character of fixedfullpath
@@ -54,19 +56,30 @@ end repeat
 
 set con_script to every item of chars as string
 
-do shell script "echo " & con_script & "Resources/iTerm2_QuakeTerminal.app/Contents/Resources/main > /tmp/quakemain"
-do shell script "echo " & con_script & "Resources/iTerm2_QuakeTerminal.app/Contents/Resources/open_quaketerminal.scpt > /tmp/quakescriptopen"
-do shell script "echo " & con_script & "Resources/iTerm2_QuakeTerminal.app/Contents/Resources/close_quaketerminal.scpt > /tmp/quakescriptclose"
-do shell script "echo " & con_script & "Resources/iTerm2_QuakeTerminal.app/Contents/Resources/quaketerminal_profile.xml > /tmp/quakepref"
-do shell script "echo " & con_script & "Resources/iTerm2_QuakeTerminal.app/Contents/MacOS/iTerm2_QuakeTerminal > /tmp/quakeapp"
-do shell script "echo " & con_script & "Resources/iTerm2_QuakeTerminal.app/Contents/Resources/killscript > /tmp/quakekill"
-do shell script "echo " & con_script & "Resources/iTerm2_QuakeTerminal.app/Contents/Resources/logo > /tmp/logo"
+do shell script "mkdir -p /tmp/" & user_name & "quaketerminal/"
+set tmp_user to "/tmp/" & user_name & "quaketerminal/"
 
-set logo_path to do shell script "head /tmp/logo"
+do shell script "echo " & con_script & "Resources/iTerm2_QuakeTerminal.app/Contents/Resources/main > " & tmp_user & "quakemain"
+do shell script "echo " & con_script & "Resources/iTerm2_QuakeTerminal.app/Contents/Resources/open_quaketerminal.scpt > " & tmp_user & "quakescriptopen"
+do shell script "echo " & con_script & "Resources/iTerm2_QuakeTerminal.app/Contents/Resources/close_quaketerminal.scpt > " & tmp_user & "quakescriptclose"
+do shell script "echo " & con_script & "Resources/iTerm2_QuakeTerminal.app/Contents/Resources/quaketerminal_profile.xml > " & tmp_user & "quakepref"
+do shell script "echo " & con_script & "Resources/iTerm2_QuakeTerminal.app/Contents/MacOS/iTerm2_QuakeTerminal > " & tmp_user & "quakeapp"
+do shell script "echo " & con_script & "Resources/iTerm2_QuakeTerminal.app/Contents/Resources/logo > " & tmp_user & "logo"
+do shell script "echo " & con_script & "Resources/iTerm2_QuakeTerminal.app/Contents/Resources/logoterminal > " & tmp_user & "logoterminal"
+do shell script "echo " & con_script & "Resources/iTerm2_QuakeTerminal.app/Contents/Resources/Displayinfo.sh > " & tmp_user & "displayscript"
 
-do shell script "cp " & logo_path & " /tmp/logodisplay"
+set logo_path to do shell script "head " & tmp_user & "logo"
+set logo_pathterminal to do shell script "head " & tmp_user & "logoterminal"
 
-set start_main to do shell script "head /private/tmp/quakemain"
+do shell script "cp " & logo_path & " " & tmp_user & "logodisplay"
+do shell script "cp " & logo_pathterminal & " " & tmp_user & "logoterminal"
+
+set start_main to do shell script "head " & tmp_user & "quakemain"
+
+do shell script "rm /tmp/quaketerminal_path"
+do shell script "rm /tmp/scriptspath"
 
 do shell script start_main & " &>/dev/null & "
 EOD
+
+

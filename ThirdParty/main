@@ -10,8 +10,9 @@ if [ -z "${make_pref}" ]; then
 mkdir -p ~/Library/Application\ Support/iTerm2_QuakeTerminal/DynamicProfiles
 
 osascript <<'EOD'
+set unix_user to do shell script "whoami"
 
-set pref_path to do shell script "head /tmp/quakepref"
+set pref_path to do shell script "head /tmp/" & unix_user & "quaketerminal/quakepref"
 
 do shell script "cp " & pref_path & "  ~/Library/Application\\ Support/iTerm2_QuakeTerminal/DynamicProfiles/"
 
@@ -39,11 +40,11 @@ run_once="false"
 
 osascript <<'EOD'
 
-set script_close to do shell script "head /tmp/quakescriptclose"
+set unix_user to do shell script "whoami"
+
+set script_close to do shell script "head /tmp/" & unix_user & "quaketerminal/quakescriptclose"
 do shell script "osascript " & script_close
 
-#set kill_script to do shell script "head /tmp/quakekill"
-#do shell script kill_script
 
 EOD
 
@@ -56,9 +57,11 @@ if [ "$run_once" == "true" ]; then
 
 osascript <<'EOD'
 
-set open_app to do shell script "head /tmp/quakeapp"
+set unix_user to do shell script "whoami"
 
-set open_script to do shell script "head /tmp/quakescriptopen"
+set open_app to do shell script "head /tmp/" & unix_user & "quaketerminal/quakeapp"
+
+set open_script to do shell script "head /tmp/" & unix_user & "quaketerminal/quakescriptopen"
 
 do shell script open_app & " &>/dev/null & "
 
@@ -68,4 +71,5 @@ do shell script "osascript " & open_script
 EOD
 
 fi
+
 
